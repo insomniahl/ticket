@@ -1,0 +1,59 @@
+<div class="page-group">
+    <div class="page" id="choose_coupon">
+
+        <!-- 标题栏 -->
+        <header class="bar bar-nav">
+            <a class="icon icon-left pull-left back"></a>
+            <h1 class="title">购买券卡</h1>
+        </header>
+
+        <!-- 工具栏 -->
+        <nav class="bar bar-tab">
+            <div class="bott">
+                <ul class="ull">
+                    <li class="widd60 whit bghuih">
+                        <div>金额：￥<span id="coupon_total">0</span></div>
+                    </li>
+                    <a href="javascript:void 0;">
+                        <li class="widd40 anur settle_coupon">
+                            <span class="icon iconfont marb font12">&#xe600;</span>结算
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 页面内容区 -->
+        <div class="content bghui">
+            <div class="ubb ubt bgwhit mart">
+                <div class="marl padd5">
+                    <span>选择场次：</span>
+                    <select id="choose_time" class="inline widd60">
+                    </select>
+                </div>
+            </div>
+
+            <div class="ubb ubt bgwhit mart">
+                <div class="marl padd5">
+                    <span>选择区域：</span>
+                    <select id="choose_area" class="inline widd60">
+                    </select>
+                </div>
+            </div>
+
+            <div class="ubb ubt bgwhit mart">
+                <div class="marl padd5">
+                    <span class="widd20">购买张数：</span>
+                    <input id="coupon_num" class="inline widd30" type="number">
+                    <button class="inline widd30 anur buy_coupon">添加</button>
+                </div>
+            </div>
+
+            <p class="ticketNum">总票数:&emsp;<span id="counter_total">0</span></p>
+            <ul id="selected-coupon"></ul>
+
+            <div style="clear:both"></div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="no-js fixed-layout">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>汝来票务系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/libs/bootstrapTable/bootstrap-table.min.css">
+    <link rel="stylesheet" href="js/libs/chosen/chosen.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse nav_header">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">汝来票务后台管理系统</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="javascript:void 0;">管理员</a></li>
+                <li><a href="javascript:void 0;" class="loginOut">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid menu_sider">
+    <div class="row-fluid">
+        <div class="col-xs-2 p_none well_left">
+        <!--<div class=" p_none well_left">-->
+            <div class="well">
+                <ul class="nav nav-pills nav-stacked menu">
+                    <li role="presentation"><span>场馆管理</span></li>
+                    <li role="presentation" class="stadium-introduce"><a href="#stadium/stadium-introduce">新增场馆</a></li>
+                    <li role="presentation" class="stadium-manager"><a href="#stadium/stadium-manager">场馆列表</a></li>
+
+                    <li role="presentation"><span>演出管理</span></li>
+                    <li role="presentation" class="show-list"><a href="#show/show-list">演出列表</a></li>
+                    <!--<li role="presentation" class="show-screen"><a href="#show/show-screen">场次管理</a></li>-->
+                    <li role="presentation" class="show-area"><a href="#show/show-area">区域管理</a></li>
+
+                    <li role="presentation"><span>数据中心</span></li>
+                    <li role="presentation" class="data"><a href="#data">已支付订单</a></li>
+
+                    <li role="presentation"><span>优惠券管理</span></li>
+                    <li role="presentation" class="coupon-publish"><a href="#coupon/coupon-publish">发布优惠券</a></li>
+                    <li role="presentation" class="coupon-list"><a href="#coupon/coupon-list">用户优惠券</a></li>
+
+                    <li role="presentation"><span>用户管理</span></li>
+                    <li role="presentation" class="user-list"><a href="#user/user-list">用户列表</a></li>
+                    <!--<li role="presentation" class="manager-list"><a href="#user/manager-list">管理员列表</a></li>-->
+                </ul>
+
+            </div>
+        </div>
+        <div class="col-xs-10 p_none well_right">
+        <!--<div class="p_none well_right">-->
+            <div class="well">
+                <div class="main-box">
+                    <!--内容-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script data-main="js/main.js" src="js/libs/requirejs/require.js"></script>
+</body>
+</html>

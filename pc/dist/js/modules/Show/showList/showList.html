@@ -1,0 +1,282 @@
+<div class="admin-content">
+    <div class="panel panel-info">
+        <div class="panel-heading">演出列表
+            <a data-toggle="modal" data-target="#newShowModal">
+                <i class="glyphicon glyphicon-plus"></i> 添加演出
+            </a>
+            <a class="showList_refresh">
+                <i class="glyphicon glyphicon-refresh"></i> 刷新
+            </a>
+        </div>
+        <div class="panel-body p_tb">
+            <table class="showList_table">
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="newShowModal" tabindex="-1" role="dialog" aria-labelledby="show_title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="show_title">演出基本信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">演出名称:</span>
+                            <input type="text" class="form-control show_name" placeholder="请输入演出名称">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">演出场馆:</span>
+                            <select class="form-control show_stadium">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">演出人员:</span>
+                            <input type="text" class="form-control show_performer" placeholder="请输入演出人员">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">演出介绍:</span>
+                            <!--<input type="text" class="form-control show_introduce" placeholder="请输入演出介绍">-->
+                            <textarea class="form-control show_introduce" style="resize: none;" rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">海报(横图):</span>
+                            <input type="file" class="form-control pic" name="pic_url">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">海报(竖图):</span>
+                            <input type="file" class="form-control pic1" name="pic_url1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="preview_pic" style="width: 375px;height: 130px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="preview_pic1" style="width: 160px;height: 240px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary save_show">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="timeTableModal" tabindex="-1" role="dialog" aria-labelledby="time_title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="time_title">场次安排</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <table class="arrange_table">
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <table class="all_price_table">
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <!--<button type="button" class="btn btn-primary save_time">保存</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="timeModal" tabindex="-1" role="dialog" aria-labelledby="arrange_title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="arrange_title">场次价格安排</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">时间:</span>
+                            <input type="datetime-local" class="form-control arrange_time">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <table class="price_table">
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary save_time">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="posterModal" tabindex="-1" role="dialog" aria-labelledby="poster_title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="poster_title">海报</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="preview_pic" style="width: 375px;height: 130px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="preview_pic1" style="width: 160px;height: 240px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="introduceModal" tabindex="-1" role="dialog" aria-labelledby="introduce_title"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="introduce_title">场馆介绍</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <textarea class="pre_txt" rows="10" readonly></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="update_title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="update_title">更新演出基本信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">演出名称:</span>
+                            <input type="text" class="form-control show_name" placeholder="请输入演出名称">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">演出场馆:</span>
+                            <input class="form-control show_stadium"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">演出人员:</span>
+                            <input type="text" class="form-control show_performer" placeholder="请输入演出人员">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">演出介绍:</span>
+                            <textarea class="form-control show_introduce" style="resize: none;" rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">海报(横图):</span>
+                            <input type="file" class="form-control upic" name="pic_url">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">海报(竖图):</span>
+                            <input type="file" class="form-control upic1" name="pic_url1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="update_pic" style="width: 375px;height: 130px; background-size: 100% 100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="update_pic1" style="width: 160px;height: 240px; background-size: 100% 100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary update_show">更新</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+

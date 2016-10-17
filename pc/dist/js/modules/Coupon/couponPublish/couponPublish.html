@@ -1,0 +1,76 @@
+<div class="admin-content">
+    <div class="panel panel-info">
+        <div class="panel-heading">优惠券列表
+            <a data-toggle="modal" data-target="#newCouponModal">
+                <i class="glyphicon glyphicon-plus"></i> 添加优惠券
+            </a>
+            <a class="coupon_refresh">
+                <i class="glyphicon glyphicon-refresh"></i> 刷新
+            </a>
+        </div>
+        <div class="panel-body p_none">
+            <table class="all_coupon_table">
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="newCouponModal" tabindex="-1" role="dialog" aria-labelledby="show_title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="show_title">优惠券基本信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">演出名称:</span>
+                            <select class="form-control show_name">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">面额:</span>
+                            <input type="number" class="form-control price" placeholder="请输入优惠券面额">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">数量:</span>
+                            <input type="number" class="form-control volume" placeholder="请输入优惠券数量">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary save_coupon">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="couponNoModal" tabindex="-1" role="dialog" aria-labelledby="coupon_title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="coupon_title">优惠券码</h4>
+            </div>
+            <div class="modal-body">
+                <table class="coupon_list">
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="admin-content" id="showArea">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="show_name"></span>管理人员信息
+            <a class="manager_add" data-toggle="modal" data-target="#managerModal">
+                <i class="glyphicon glyphicon-plus"></i> 添加
+            </a>
+            <a class="manager_refresh">
+                <i class="glyphicon glyphicon-refresh"></i> 刷新
+            </a>
+        </div>
+        <div class="panel-body p_none">
+            <table class="manager_table">
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="managerModal" tabindex="-1" role="dialog" aria-labelledby="manager_title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="manager_title">
+                    <span class="stadium_name"></span>基本信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">账号:</span>
+                            <input type="text" class="form-control username" placeholder="请输入账号">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">密码:</span>
+                            <input type="password" class="form-control password" placeholder="请输入密码">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">姓名:</span>
+                            <input type="text" class="form-control name" placeholder="请输入姓名">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">手机号码:</span>
+                            <input type="number" class="form-control tellphone" placeholder="请输入联系方式">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary save_manager">保存</button>
+            </div>
+        </div>
+    </div>
+</div>

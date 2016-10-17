@@ -1,0 +1,33 @@
+<div class="admin-content" id="showArea">
+    <div class="row m">
+        <div class="col-xs-4">
+            <div class="input-group">
+                <span class="input-group-addon">演出:</span>
+                <select id="show_order" class="form-control">
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="input-group">
+                <span class="input-group-addon">场次:</span>
+                <select id="show_time" class="form-control">
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="input-group">
+                <button class="btn btn-primary check_order">查看订单</button>
+                <button class="btn btn-warning refresh_order">刷新</button>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="show_name"></span>已完成订单信息
+        </div>
+        <div class="panel-body p_tb">
+            <table class="order_table">
+            </table>
+        </div>
+    </div>
+</div>

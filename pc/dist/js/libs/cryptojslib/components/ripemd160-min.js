@@ -1,0 +1,20 @@
+/*
+CryptoJS v3.1.2
+code.google.com/p/crypto-js
+(c) 2009-2013 by Jeff Mott. All rights reserved.
+code.google.com/p/crypto-js/wiki/License
+*/
+
+/*
+
+(c) 2012 by C?dric Mesnil. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    - Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    - Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+!function(){var r=CryptoJS,e=r.lib,t=e.WordArray,a=e.Hasher,e=r.algo,s=t.create([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,7,4,13,1,10,6,15,3,12,0,9,5,2,14,11,8,3,10,14,4,9,15,8,1,2,7,0,6,13,11,5,12,1,9,11,10,0,8,12,4,13,3,7,15,14,5,6,2,4,0,5,9,7,12,2,10,14,1,3,8,11,6,15,13]),o=t.create([5,14,7,0,9,2,11,4,13,6,15,8,1,10,3,12,6,11,3,7,0,13,5,10,14,15,8,12,4,9,1,2,15,5,1,3,7,14,6,9,11,8,12,2,10,0,4,13,8,6,4,1,3,11,15,0,5,12,2,13,9,7,10,14,12,15,10,4,1,5,8,7,6,2,13,14,0,3,9,11]),c=t.create([11,14,15,12,5,8,7,9,11,13,14,15,6,7,9,8,7,6,8,13,11,9,7,15,7,12,15,9,11,7,13,12,11,13,6,7,14,9,13,15,14,8,13,6,5,12,7,5,11,12,14,15,14,15,9,8,9,14,5,6,8,6,5,12,9,15,5,11,6,8,13,12,5,12,13,14,11,8,5,6]),h=t.create([8,9,9,11,13,15,15,5,7,7,8,11,14,14,12,6,9,13,15,7,12,8,9,11,7,7,12,7,6,15,13,11,9,7,15,11,8,6,6,14,12,13,5,14,13,13,7,5,15,5,8,11,14,14,6,14,6,9,12,9,12,5,15,8,8,5,12,9,12,5,14,6,8,13,6,5,15,13,11,11]),n=t.create([0,1518500249,1859775393,2400959708,2840853838]),i=t.create([1352829926,1548603684,1836072691,2053994217,0]),e=e.RIPEMD160=a.extend({_doReset:function(){this._hash=t.create([1732584193,4023233417,2562383102,271733878,3285377520])},_doProcessBlock:function(r,e){for(var t=0;16>t;t++){var a=e+t,d=r[a];r[a]=16711935&(d<<8|d>>>24)|4278255360&(d<<24|d>>>8)}var _,l,w,f,u,v,y,H,g,p,a=this._hash.words,d=n.words,B=i.words,D=s.words,M=o.words,P=c.words,R=h.words;v=_=a[0],y=l=a[1],H=w=a[2],g=f=a[3],p=u=a[4];for(var E,t=0;80>t;t+=1)E=_+r[e+D[t]]|0,E=16>t?E+((l^w^f)+d[0]):32>t?E+((l&w|~l&f)+d[1]):48>t?E+(((l|~w)^f)+d[2]):64>t?E+((l&f|w&~f)+d[3]):E+((l^(w|~f))+d[4]),E|=0,E=E<<P[t]|E>>>32-P[t],E=E+u|0,_=u,u=f,f=w<<10|w>>>22,w=l,l=E,E=v+r[e+M[t]]|0,E=16>t?E+((y^(H|~g))+B[0]):32>t?E+((y&g|H&~g)+B[1]):48>t?E+(((y|~H)^g)+B[2]):64>t?E+((y&H|~y&g)+B[3]):E+((y^H^g)+B[4]),E|=0,E=E<<R[t]|E>>>32-R[t],E=E+p|0,v=p,p=g,g=H<<10|H>>>22,H=y,y=E;E=a[1]+w+g|0,a[1]=a[2]+f+p|0,a[2]=a[3]+u+v|0,a[3]=a[4]+_+y|0,a[4]=a[0]+l+H|0,a[0]=E},_doFinalize:function(){var r=this._data,e=r.words,t=8*this._nDataBytes,a=8*r.sigBytes;for(e[a>>>5]|=128<<24-a%32,e[(a+64>>>9<<4)+14]=16711935&(t<<8|t>>>24)|4278255360&(t<<24|t>>>8),r.sigBytes=4*(e.length+1),this._process(),r=this._hash,e=r.words,t=0;5>t;t++)a=e[t],e[t]=16711935&(a<<8|a>>>24)|4278255360&(a<<24|a>>>8);return r},clone:function(){var r=a.clone.call(this);return r._hash=this._hash.clone(),r}});r.RIPEMD160=a._createHelper(e),r.HmacRIPEMD160=a._createHmacHelper(e)}(Math);
